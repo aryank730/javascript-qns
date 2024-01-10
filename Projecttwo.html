@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Find the youngest one among three persons</title>
+   <style>
+      .container {
+         text-align: center;
+         justify-content: center;
+      }
+   </style>
+</head>
+
+<body>
+   <script>
+      function calc() {
+         var peone = parseInt(document.getElementById("pone").value);
+         var petwo = parseInt(document.getElementById("ptwo").value);
+         var pethree = parseInt(document.getElementById("pthr").value);
+
+         if (peone < petwo && peone < pethree) {
+            document.getElementById("result").innerHTML = "The First Person is Younger with age of :" + peone;
+         } else if (petwo < pethree && petwo < peone) {
+            document.getElementById("result").innerHTML = "The second Person is Younger with age of :" + petwo;
+         } else {
+            document.getElementById("result").innerHTML = "The third Person is Younger with age of :" + pethree;
+         }
+      }
+
+   </script>
+
+<div class="container">
+   <h2>The youngest one among three persons</h2>
+   <label for="pone">Enter First Person age : </label>
+   <input type="number" id="pone" placeholder="Number"> <br> <br>
+
+   <label for="ptwo">Enter Second Person age : </label>
+   <input type="number" id="ptwo" placeholder="Number"> <br> <br>
+
+   <label for="pthree">Enter Third Person age : </label>
+   <input type="number" id="pthr" placeholder="Number"> <br> <br>
+
+   <button onclick="calc()">Calculate</button> <br>
+   <div id="result"></div>
+</div>
+</body>
+
+</html>
